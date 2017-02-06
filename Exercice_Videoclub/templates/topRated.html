@@ -4,7 +4,7 @@
     <div class="row  block1">
         <div class=" col-md-6 col-md-offset-3">
             <div class="input-group input-group-lg">
-                <input class="form-control block-center" type="search" value="" placeholder="Search movies" id="example-search-input">
+                <input class="form-control block-center" ng-model="query" type="search" value="" placeholder="Search movies" id="example-search-input">
             </div>
         </div>
         <div class="row col-md-1">
@@ -19,11 +19,10 @@
 <!--FILMS-->
 <div ng-controller="TopRatedController">
     <div class="row col-md-12  block-films ">
-        <div class="col-sm-2 col-md-2 block2 " ng-repeat="movie in movies">
+        <div class="col-sm-2 col-md-2 block2 " ng-repeat="movie in movies | filter : {title : query}">
             <div class="row"> 
                 <img class="center-block" data-toggle="modal" data-target="#myModal" src="http://image.tmdb.org/t/p/w150/{{ movie.poster_path }}" width="80%" height="270px" />
 				<footer class="center-block">{{movie.release_date}}</footer>
-			
                 <div class="container">        
                     <div class="row" ng-repeat="movie in movies">
                         <!-- Modal -->
