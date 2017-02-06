@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <style>
+
+    small { color: #ccc; }
+    small:hover { color: red; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <div ng-controller="reposController">
+    <form action="">
+      <input type="text" ng-model="username">
+      <button ng-click="getUserRepos($event)" type="submit">Get Repos</button>
+    </form>
+    <ul>
+      <li ng-repeat="repo in repos">
+        {{ repo.name }} <small ng-click="removeElement($index)" >[delete]</small>
+      </li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <script src="factory.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="appFilm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FILMS - LOVERS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <body>
+        <!--NAV-->
+        <nav class="navbar navbar-toggleable-md  bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#/movie">Movie Collection</a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link rol active" role="presentation" href="#/popular">Popular Movies -<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="presentation" href="#/upcoming" ng-click="changeTitle()">Upcoming Movies -</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="presentation" href="#/playing">Now Playing Movies -</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="presentation" href="#/top">Top Rated Movies</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div ng-view></div>
+        <script src="js/module.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/factory.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+
+</html>

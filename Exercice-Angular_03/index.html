@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        {{5+6}}
+        <button class="btn btn-outline-success" style="width: 140px; height:40px; font-size:20px;" (click)="$event.stopPropagation(); myDrop.open();">Show Clic >></button>
+        <textarea ng-model="text"></textarea>
+        <input type="" name="" ng-model="name">{{name}}
+        
+
+            <ul style="font-size:20px;">
+                <li><a href="#/#">HOME</a></li>
+                <li><a href="#/about">ABOUT</a></li>
+                <li><a href="#/contact">CONTACT</a></li>
+            </ul>
+        </div>
+   
+    <div ng-view></div>
+    <script>
+    // modulo de dependencia
+
+    angular.module('myApp', ['ngRoute'])
+
+    .controller('myController', function($scope) {
+       $scope.control_home = "Hola Angular, controlador de la HOME";
+         this.control_about = "Hola Angular, controlador de la ABOUT";
+         this.control_contact = "Hola Angular, controlador de la CONTACT";
+          // this.nombre="carles"; evitamos scope con this para poder crear más propiedades en un controlador
+    })
+
+
+    .config(function($routeProvider) { //Configuracion de las rutas del HTML
+
+        $routeProvider //$routeProvider "palabra reservada" nos permite difinir las rutas
+            .when('/', {
+            templateUrl: 'templates/home.html' // 1 ruta
+        })
+
+        .when('/about', {
+            templateUrl: 'templates/about.html' // 2 ruta
+        })
+
+        .when('/contact', {
+            templateUrl: 'templates/contact.html' // 3 ruta
+        })
+    })
+    </script>
+    <script type="text/javascript" src="js/config.js"></script>
+</body>
+
+</html>
