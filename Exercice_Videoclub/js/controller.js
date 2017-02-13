@@ -16,7 +16,7 @@ angular.module('appFilm')
   MoviesFactory.getPopular()
       .then(function (response) {
         $scope.movies = response.data.results
-      })
+      })angular.module('appFilm')
 })
 angular.module('appFilm')
 .controller('UpcomingController', function ($scope, MoviesFactory) {

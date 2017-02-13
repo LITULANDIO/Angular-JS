@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="skylabChat">
+<head>
+	<meta charset="UTF-8">
+	<title>firebase</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+</head>
+<body ng-controller"authController">
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDk7C1hAElksAaNFF3yP9HSi_hMpuSaqd0",
+    authDomain: "skylab-chat-ecb25.firebaseapp.com",
+    databaseURL: "https://skylab-chat-ecb25.firebaseio.com",
+    storageBucket: "skylab-chat-ecb25.appspot.com",
+    messagingSenderId: "584795510634"
+  };
+  firebase.initializeApp(config);
+
+angular.module("skylabChat", [])
+
+angular.module('skylabChat')
+.controller('authController', function ($scope, $firebaseAuth) {
+ $scope.auth = $firebaseAuth();
+ 
+        
+      })
+
+</script>
+
+
+
+
+
+	
+</body>
+</html>

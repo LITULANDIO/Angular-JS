@@ -1,0 +1,5 @@
+git brunch gh-pages
+
+git push origin gh-pages --> subir a produccion
+
+cargar libreria angular-filter
